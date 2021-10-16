@@ -2,6 +2,12 @@
   "name": "nft-minting-bot",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Grant Magdanz <grant@commonstock.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "execute": "node main.js"
+  },
+  "dependencies": {
+    "bnc-sdk": "^3.6.0",
+    "ethers": "^5.4.7"
+  }
 }
