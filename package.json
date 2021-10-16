@@ -1,0 +1,7 @@
+{
+  "name": "nft-minting-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Grant Magdanz <grant@commonstock.com>",
+  "license": "MIT"
+}
