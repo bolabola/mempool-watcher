@@ -1,1 +1,1 @@
-worker: yarn ropsten
+worker: yarn start

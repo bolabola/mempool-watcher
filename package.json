@@ -5,6 +5,8 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
+    "start": "node main.js",
+    "mainnet": "CHAIN=mainnet node main.js",
     "rinkeby": "CHAIN=rinkeby node main.js",
     "ropsten": "CHAIN=ropsten node main.js"
   },
