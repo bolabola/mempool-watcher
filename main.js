@@ -16,7 +16,7 @@ function handleTx({ transaction }) {
     if (method == 0xc4e37095) { // This is the method address for the setSaleState
         if (param == 0x1) {
             if (transaction.status == 'pending') {
-                mint(transaction)
+                mint(transaction.maxPriorityFeePerGas)
             }
         } else {
             console.log('Minting is shutting down, do nothing.')
