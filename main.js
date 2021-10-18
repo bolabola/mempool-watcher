@@ -8,6 +8,7 @@ import { mint } from './wallet.js'
 function handleTx({ transaction }) {
     if (transaction.to !== process.env.CONTRACT_ADDRESS) {
         console.log("no op, transaction not targeting contract address")
+        return;
     }
 
     const method = ethers.utils.hexDataSlice(transaction.input, 0, 4)
