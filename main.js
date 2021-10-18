@@ -47,4 +47,10 @@ function main() {
     } = blocknative.account(process.env.OWNER_ADDRESS)
 }
 
+// We are relying on the nonce not changing in order to ensure we don't waste a ton of gas
+// Since providers try to restart when a process dies we need to make sure the process doesn't die
+process.on('uncaughtException', function(err) {
+    console.log('Caught exception: ' + err);
+  });
+
 main()

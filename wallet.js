@@ -2,7 +2,7 @@ import './env.js'
 import { ethers } from "ethers";
 import abi from './abi.js'
 
-const COUNT_TO_MINT = 5
+const COUNT_TO_MINT = 2
 const COST_PER_MINT_WEI = ethers.utils.parseEther('.123')
 
 // Also just use an account that has no more than the max you'd be willing to pay since there are likely bugs here
@@ -36,9 +36,12 @@ export async function mint({ maxPriorityFeePerGas, maxFeePerGas }) {
         maxFeePerGas: newMaxFeePerGas,
         nonce: nonce
     }
+    console.log(overrides)
     const tx = await doodlesContract.mint(COUNT_TO_MINT, overrides)
     console.log(tx)
     console.log("MINT IS OPEN AND TRANSACTION IS SENT!")
     await tx.wait()
     console.log(tx)
 }
+
+console.log(nonce)
